@@ -25,19 +25,21 @@ class Test {
       // the browser does not make obvious. Had to do some StackOverflow research to find this out
       awaitResponse = error.response;
     }
+
+    awaitResponse.data.cod === 200 ? this.setResults(awaitResponse.data) : this.setError(awaitResponse);
     // If we get a status code of 200, display the results of the axios call to the user
-    if(awaitResponse.data.cod === 200){
-      this.setResults(awaitResponse.data);
+    // if(awaitResponse.data.cod === 200){
+    //   this.setResults(awaitResponse.data);
       // If we get anything other than 200 (most likely 404), display the error message to the user
-    } else {
-      this.setError(awaitResponse);
-    }
+    // } else {
+    //   this.setError(awaitResponse);
+    // }
   }
 
   setError(message) {
     // TODO: Format the error
     console.log(message);
-    this.testResults.innerHTML = message.status;
+    this.testResults.innerHTML = `<h3>Error fetching results</h3><p>Status Code: ${message.data.cod} - ${message.data.message}</p> <p></p>`;
   }
 
   setResults(results) {

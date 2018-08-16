@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+  background-image: url('https://abduzeedo.com/sites/default/files/styles/home_cover/public/originals/rob-bates-306647.jpg?itok=ghPyG4Hw');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.heading {
+  text-align: center;
+}
+
+.geolocation {
+  color: white;
+}
+
+.container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  /* height: 50vh; */
+  margin: 50px auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.city-input {
+  border-radius: 3px;
+  padding: 10px 18px;
+}
+
+.test-results {
+  color: white;
+}
+
+.button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.button-container > button, .submit-btn {
+  margin: 5px;
+  padding: 10px 18px;
+  color: white;
+  background-color: #008000;
+  border: none;
+  border-radius: 3px;
+  transition: all 200ms ease-in-out;
+  font-size: 14px;
+}
+
+.button-container > button:hover, .submit-btn:hover {
+  background-color: #00a000;
+}
+
+.button-container > button:active, .submit-btn:active {
+  background-color: #006000;
+}
