@@ -13,6 +13,10 @@ cityForm.onsubmit = e => {
   const cityInput = document.querySelector('#city');
   const newCity = cityInput.value;
   const test = new Test(newCity);
+  // If the user leaves the input blank or only enters one letter, alert them to enter a valid city
+  if(newCity.length < 2){
+    alert('Please enter a city to search for!')
+  }
   addButtonForTest(buttonContainer, test, newCity);
   cityInput.value = '';
 };
