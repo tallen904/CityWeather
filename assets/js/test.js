@@ -12,7 +12,7 @@ class Test {
   async run() {
     console.log(new Date().toISOString(), '[Test]', 'Running the test');
     // TODO: Make the API call and handle the results
-    const url = `http://api.openweathermap.org/data/2.5/weather?q=${this.city}&units=imperial&appid=25e989bd41e3e24ce13173d8126e0fd6`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${this.city}&units=imperial&appid=25e989bd41e3e24ce13173d8126e0fd6`;
     let awaitResponse;
     // This try statement will test to make sure our axios call doesn't return an error
     // If it does, we will hit the catch statement and return an error to the user

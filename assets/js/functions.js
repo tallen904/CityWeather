@@ -50,7 +50,7 @@ async function geolocate(url) {
 const success = pos => {
   const lat = pos.coords.latitude;
   const lon = pos.coords.longitude;
-  const url = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=25e989bd41e3e24ce13173d8126e0fd6`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=25e989bd41e3e24ce13173d8126e0fd6`;
   geolocate(url);
 };
 // Geolocation on error callback - should generally only run if the user declines the geolocation services
